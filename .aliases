@@ -7,10 +7,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias cgd="cd ~/Google Drive"
+alias cdl="cd ~/Downloads"
+alias cdt="cd ~/Desktop"
+alias cdc="cd ~/Code"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -133,7 +133,6 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
@@ -145,5 +144,12 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# Faster npm for europeans
-command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
+# Locate
+alias updatedb="LC_ALL='C' sudo gupdatedb --prunepaths='/Volumes'"  # Don't index any external drives, or anything mounted via sshfs, etc.
+alias locate="glocate"
+
+# If dircolors exist use with GNU ls
+if [ -f "$HOME/.dircolors" ] ; then
+	eval $(gdircolors -b $HOME/.dircolors)
+	alias ls="gls --color=auto"
+fi
