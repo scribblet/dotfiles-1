@@ -152,4 +152,7 @@ alias locate="glocate"
 if [ -f "$HOME/.dircolors" ] ; then
 	eval $(gdircolors -b $HOME/.dircolors)
 	alias ls="gls --color=auto"
+	alias l="ls -lF"
+	alias la="ls -laF"
+	alias lsd="ls -lF | grep --color=never '^d'"
 fi
