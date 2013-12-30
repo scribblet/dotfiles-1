@@ -18,6 +18,12 @@ sudo scutil --set HostName "Sprite"
 sudo scutil --set LocalHostName "Sprite"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Sprite"
 
+# Power settings
+#sudo pmset -a displaysleep 1
+#sudo pmset -b displaysleep 1
+#sudo pmset -a sleep 1
+#sudo pmset -b sleep 1
+
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
