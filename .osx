@@ -31,7 +31,6 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 defaults write ~/Library/Preferences/com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
-#	"/System/Library/CoreServices/Menu Extras/Script Menu.menu" \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
