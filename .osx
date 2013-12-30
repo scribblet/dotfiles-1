@@ -21,11 +21,11 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
-# Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
+# Menu bar: Show AirPort, Battery, and Clock
 defaults write ~/Library/Preferences/com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
-	"/System/Library/CoreServices/Menu Extras/Script Menu.menu" \
+#	"/System/Library/CoreServices/Menu Extras/Script Menu.menu" \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
@@ -604,23 +604,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Allow installing user scripts via GitHub or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
-
-###############################################################################
-# GPGMail 2                                                                   #
-###############################################################################
-
-# Disable signing emails by default
-defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
-
-###############################################################################
-# SizeUp.app                                                                  #
-###############################################################################
-
-# Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
-
-# Don’t show the preferences window on next start
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
 ###############################################################################
 # Sublime Text                                                                #
